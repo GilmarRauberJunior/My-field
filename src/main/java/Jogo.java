@@ -16,7 +16,7 @@ public class Jogo {
                 + "e após isso serão colocados 16 cartas de diferentes naipes e valores, o jogador 1 irá coletar as cartas de mesmo \nnaipe escolhido"
                 + " anteriormente, o mesmo acontece para o jogador 2, se não houver nenhuma carta do naipe selecionado \npelo jogador, será "
                 + "disponibilizado outro deck com 16 cartas com outros valores. \nApós as cartas serem coletadas será ferita uma somatória dos"
-                + "valores das cartas coletadas, \ne o jogador que tiver a maior somatória ganha.\n\nCartas não disponíveis: \nRei, Dama, Valete.";
+                + "valores das cartas coletadas, \ne o jogador que tiver a maior somatória ganha.\n\nCartas não disponíveis: \nRei, Dama, Valete.\nO A equivale ao número 1.";
         System.out.println(comoJogar);
         System.out.println("============================");
         
