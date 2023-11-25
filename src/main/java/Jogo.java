@@ -4,13 +4,15 @@ public class Jogo {
     
     static Scanner scan = new Scanner(System.in);
     static Random rnd = new Random();
-    
+
+    //Uma função exclusivamente usada para o menu, algo para não deixar o código imenso
     public static void menu(){
         System.out.println("==== Menu Principal =====\n");
         System.out.println("1. Iniciar jogo\n2. Como jogar\n3. Sair");
         System.out.println("================");
     }
-    
+
+    //Nessa parte a segir é one fica as regras e de como funciona o jogo em si
     public static void comoJogar(){
         String comoJogar = "Como funciona: \n\nO jogo funciona da segunte forma, os jogadores devem escolher um naipe de carta diferente do outro jogador,\n"
                 + "e após isso serão colocados 16 cartas de diferentes naipes e valores, o jogador 1 irá coletar as cartas de mesmo \nnaipe escolhido"
@@ -38,13 +40,15 @@ public class Jogo {
             case 2: escolher();
         }
     }
-    
+
+    //Aqui é onde e "criado" o jogador
     public static int jogador(String nome){
         int soma = jogar(nome);
         
         return soma;
     }
-    
+
+    //Nesssa parte é onde o jogo acontece de fato, onde esta a parte fundamental de nossso projeto
     public static int jogar(String nome){
         int soma = 0, numCarta;
         String[] naipesCarta = {"Paus", "Ouro", "Espada", "Copas"};
@@ -79,11 +83,14 @@ public class Jogo {
         
         return soma;
     }
-    
+
+    //Aqui é onde o jogador pode escolher por inde deseja ir
     public static void escolher(){
         menu();
         System.out.print("Selecione uma opção: ");
         int opc = scan.nextInt();
+
+        //Válidando opc
         if(opc > 3){
             do{
                 System.out.println("===============");
@@ -93,7 +100,8 @@ public class Jogo {
             }while(opc > 3);
         }
         System.out.println("====================");
-        
+
+        //Opções
         switch(opc){
             case 1: 
                 //Jogador 1
