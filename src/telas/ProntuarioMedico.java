@@ -4,6 +4,9 @@
  */
 package telas;
 
+import java.util.Enumeration;
+import javax.swing.AbstractButton;
+
 /**
  *
  * @author Junior
@@ -15,6 +18,18 @@ public class ProntuarioMedico extends javax.swing.JFrame {
      */
     public ProntuarioMedico() {
         initComponents();
+    }
+    
+    public ProntuarioMedico(String nome, String temp, String pressao, String localDor, String inteDor, String tipoDor, String duraDor) {
+        initComponents();
+        
+        txtNomePaciente.setText(nome);
+        txtTemp.setText(temp);
+        txtPressao.setText(pressao);
+        txtLocalDor.setText(localDor);
+        txtInteDor.setText(inteDor);
+        txtTipoDor.setText(tipoDor);
+        txtDurDor.setText(duraDor);
     }
 
     /**
@@ -29,12 +44,8 @@ public class ProntuarioMedico extends javax.swing.JFrame {
         lblTituloFormulario = new javax.swing.JLabel();
         lblTemPaciente = new javax.swing.JLabel();
         lblPressaoPaciente = new javax.swing.JLabel();
-        cmbLocDor = new javax.swing.JComboBox<>();
         lblLocalDor = new javax.swing.JLabel();
         lblInteDor = new javax.swing.JLabel();
-        btnDor3 = new javax.swing.JRadioButton();
-        btnDor1 = new javax.swing.JRadioButton();
-        btnDor2 = new javax.swing.JRadioButton();
         lblTipoDor = new javax.swing.JLabel();
         lblDuraDor = new javax.swing.JLabel();
         txtDurDor = new javax.swing.JTextField();
@@ -48,6 +59,8 @@ public class ProntuarioMedico extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         lblDuraDor1 = new javax.swing.JLabel();
         btnSalvar = new javax.swing.JToggleButton();
+        txtTipoDor = new javax.swing.JTextField();
+        txtLocalDor = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prontuário Médico - ADS Consultas");
@@ -66,15 +79,6 @@ public class ProntuarioMedico extends javax.swing.JFrame {
         getContentPane().add(lblPressaoPaciente);
         lblPressaoPaciente.setBounds(240, 120, 60, 20);
 
-        cmbLocDor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Abdômem", "Cabeça", "Costela", "Braço", "Pescoço", "Mão", "Pé", "Joelho", "Costas", "Ouvido", "Articulação", "Cóccix", "Boca", "Dente", "Nariz", "Olhos", "Mandíbula" }));
-        cmbLocDor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbLocDorActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cmbLocDor);
-        cmbLocDor.setBounds(450, 140, 150, 30);
-
         lblLocalDor.setText("Local da dor:");
         getContentPane().add(lblLocalDor);
         lblLocalDor.setBounds(450, 120, 80, 20);
@@ -82,28 +86,6 @@ public class ProntuarioMedico extends javax.swing.JFrame {
         lblInteDor.setText("Itensidade da dor (0 à 10): ");
         getContentPane().add(lblInteDor);
         lblInteDor.setBounds(30, 180, 210, 20);
-
-        btnDor3.setText("Pulsante");
-        getContentPane().add(btnDor3);
-        btnDor3.setBounds(540, 210, 80, 30);
-
-        btnDor1.setText("Aguda");
-        btnDor1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDor1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnDor1);
-        btnDor1.setBounds(380, 210, 70, 30);
-
-        btnDor2.setText("Contínua");
-        btnDor2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDor2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnDor2);
-        btnDor2.setBounds(450, 210, 80, 30);
 
         lblTipoDor.setText("Tipo de dor:");
         getContentPane().add(lblTipoDor);
@@ -172,23 +154,15 @@ public class ProntuarioMedico extends javax.swing.JFrame {
 
         btnSalvar.setText("Salvar");
         getContentPane().add(btnSalvar);
-        btnSalvar.setBounds(240, 483, 61, 30);
+        btnSalvar.setBounds(250, 480, 100, 30);
+        getContentPane().add(txtTipoDor);
+        txtTipoDor.setBounds(380, 210, 170, 30);
+        getContentPane().add(txtLocalDor);
+        txtLocalDor.setBounds(450, 140, 100, 30);
 
-        setSize(new java.awt.Dimension(646, 550));
+        setSize(new java.awt.Dimension(646, 556));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void cmbLocDorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbLocDorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbLocDorActionPerformed
-
-    private void btnDor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDor1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDor1ActionPerformed
-
-    private void btnDor2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDor2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDor2ActionPerformed
 
     private void txtDurDorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDurDorActionPerformed
         // TODO add your handling code here:
@@ -234,11 +208,7 @@ public class ProntuarioMedico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton btnDor1;
-    private javax.swing.JRadioButton btnDor2;
-    private javax.swing.JRadioButton btnDor3;
     private javax.swing.JToggleButton btnSalvar;
-    private javax.swing.JComboBox<String> cmbLocDor;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lblDuraDor;
@@ -252,9 +222,11 @@ public class ProntuarioMedico extends javax.swing.JFrame {
     private javax.swing.JLabel lblTituloFormulario;
     private javax.swing.JTextField txtDurDor;
     private javax.swing.JFormattedTextField txtInteDor;
+    private javax.swing.JTextField txtLocalDor;
     private javax.swing.JTextField txtNomePaciente;
     private javax.swing.JFormattedTextField txtPressao;
     private javax.swing.JTextArea txtProntuario;
     private javax.swing.JFormattedTextField txtTemp;
+    private javax.swing.JTextField txtTipoDor;
     // End of variables declaration//GEN-END:variables
 }

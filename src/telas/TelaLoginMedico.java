@@ -106,7 +106,27 @@ public class TelaLoginMedico extends javax.swing.JFrame {
             ResultSet resultado = new AppDao().logarMedico(nome, senha, crm);
             
             if(resultado.next()){
-                new ProntuarioMedico().setVisible(true);
+                String nomeFicha;
+
+                nomeFicha = JOptionPane.showInputDialog("Digite o nome da ficha a ser buscado: ");
+                
+                ResultSet prontuario = new AppDao().exibirProntuario(nomeFicha);
+                
+                if(prontuario.next()){
+                    String nomeF,temp,pressao,localDor,inteDor,tipoDor,duraDor;
+                    
+                    nomeF = prontuario.getString("nome_Paciente");
+                    temp = prontuario.getString("temp");
+                    pressao = prontuario.getString("pressao");
+                    localDor = prontuario.getString("local_Dor");
+                    inteDor = prontuario.getString("inte_Dor");
+                    tipoDor = prontuario.getString("tipo_Dor");
+                    duraDor = prontuario.getString("dura_Dor");
+                    
+                    new ProntuarioMedico(nomeF,temp,pressao,localDor,inteDor,tipoDor,duraDor).setVisible(true);
+                }else{
+                    JOptionPane.showMessageDialog(null, "Nome de paciente inválido.");
+                }
             }else{
                 JOptionPane.showMessageDialog(null, "Usuário e/ou senha inválidos.");
             }   

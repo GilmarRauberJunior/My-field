@@ -202,7 +202,7 @@ public class AppDao {
     public ResultSet exibirProntuario(String nome) throws ClassNotFoundException, SQLException{
         conectar();
         
-        st = conectado.prepareStatement("Select temp,pressao,local_Dor,inte_Dor,tipo_Dor,dura_Dor from ficha_paciente where nome = ?");
+        st = conectado.prepareStatement("Select nome_Paciente,temp,pressao,local_Dor,inte_Dor,tipo_Dor,dura_Dor from ficha_paciente where nome_Paciente = ?");
         st.setString(1, nome);
         
         ResultSet dadosFicha = st.executeQuery();
