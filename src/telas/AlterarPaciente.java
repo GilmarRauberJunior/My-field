@@ -226,7 +226,7 @@ public class AlterarPaciente extends javax.swing.JFrame {
         try {
             new AppDao().alterarPaciente(nome, cpf, telefone, endereco, cep, bairro, complemento, numero);
 
-            JOptionPane.showMessageDialog(null, "Paciente cadastrado com sucesso.");
+            JOptionPane.showMessageDialog(null, "Paciente alterado com sucesso.");
 
             txtNomePaciente.setText("");
             txtEndPaciente.setText("");
@@ -236,8 +236,8 @@ public class AlterarPaciente extends javax.swing.JFrame {
             txtCpfPaciente.setText("");
             txtTelPaciente.setText("");
             txtNumPaciente.setText("");
-
-            new Triagem().setVisible(true);
+            
+            dispose();
         } catch (ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao tentar localizar o Driver.");
         } catch (SQLException ex) {

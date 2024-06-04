@@ -10,7 +10,7 @@ public class AppDao {
     private void conectar() throws ClassNotFoundException, SQLException {
         //Conectando com o Banco de Dados
         Class.forName("com.mysql.cj.jdbc.Driver");
-        conectado = DriverManager.getConnection("jdbc:mysql://localhost:3306/consultorio", "root", "p@$$w0rd");
+        conectado = DriverManager.getConnection("jdbc:mysql://localhost:3307/consultorio", "root", "p@$$w0rd");
     }
     
     //Login Tela Recepcionista
@@ -148,7 +148,7 @@ public class AppDao {
     public void alterarRep(String nome, String senha) throws ClassNotFoundException, SQLException{
         conectar();
         
-        st = conectado.prepareStatement("Update medico set senha = ? where nome = ?");
+        st = conectado.prepareStatement("Update rep set senha = ? where nome = ?");
         st.setString(1, senha);
         st.setString(2, nome);
         st.executeUpdate();

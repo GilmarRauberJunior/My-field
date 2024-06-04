@@ -45,7 +45,8 @@ public class AlterarRecepcionista extends javax.swing.JFrame {
         btnAlterar = new javax.swing.JButton();
         txtNomeRecepcionista = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Alterar Recepcionista - ADS Consultas");
         getContentPane().setLayout(null);
 
         lblNomeRecepcionista.setText("Nome:");

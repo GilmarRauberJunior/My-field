@@ -27,7 +27,7 @@ public class ListarPacientes extends javax.swing.JFrame {
         private void carregarDados(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conectado = DriverManager.getConnection("jdbc:mysql://localhost:3306/consultorio", "root", "p@$$w0rd");
+            Connection conectado = DriverManager.getConnection("jdbc:mysql://localhost:3307/consultorio", "root", "p@$$w0rd");
 
             PreparedStatement st = conectado.prepareStatement("SELECT * FROM paciente");
             ResultSet paciente = st.executeQuery();

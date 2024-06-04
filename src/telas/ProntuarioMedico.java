@@ -47,6 +47,7 @@ public class ProntuarioMedico extends javax.swing.JFrame {
         txtProntuario = new javax.swing.JTextArea();
         jSeparator2 = new javax.swing.JSeparator();
         lblDuraDor1 = new javax.swing.JLabel();
+        btnSalvar = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prontuário Médico - ADS Consultas");
@@ -169,7 +170,11 @@ public class ProntuarioMedico extends javax.swing.JFrame {
         getContentPane().add(lblDuraDor1);
         lblDuraDor1.setBounds(30, 250, 100, 20);
 
-        setSize(new java.awt.Dimension(646, 504));
+        btnSalvar.setText("Salvar");
+        getContentPane().add(btnSalvar);
+        btnSalvar.setBounds(240, 483, 61, 30);
+
+        setSize(new java.awt.Dimension(646, 550));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -232,6 +237,7 @@ public class ProntuarioMedico extends javax.swing.JFrame {
     private javax.swing.JRadioButton btnDor1;
     private javax.swing.JRadioButton btnDor2;
     private javax.swing.JRadioButton btnDor3;
+    private javax.swing.JToggleButton btnSalvar;
     private javax.swing.JComboBox<String> cmbLocDor;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;

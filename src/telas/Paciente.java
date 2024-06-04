@@ -483,7 +483,7 @@ public class Paciente extends javax.swing.JFrame {
 
                 new AlterarMedico(nomeM,senha,crm).setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Paciente não encontrado ou não existe.");
+                JOptionPane.showMessageDialog(null, "Recepcionista não encontrado ou não existe.");
             }
         } catch (ClassNotFoundException | java.sql.SQLException ex) {
             JOptionPane.showMessageDialog(null, "Entre em contato com o suporte e informe o erro: " + ex.getMessage());
@@ -513,7 +513,7 @@ public class Paciente extends javax.swing.JFrame {
 
                 new ExibirMedico(nomeM,senha,crm).setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Paciente não encontrado ou não existe.");
+                JOptionPane.showMessageDialog(null, "Recepcionista não encontrado ou não existe.");
             }
         } catch (ClassNotFoundException | java.sql.SQLException ex) {
             JOptionPane.showMessageDialog(null, "Entre em contato com o suporte e informe o erro: " + ex.getMessage());
@@ -561,7 +561,7 @@ public class Paciente extends javax.swing.JFrame {
 
                 new AlterarRecepcionista(nomeM,senha).setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Paciente não encontrado ou não existe.");
+                JOptionPane.showMessageDialog(null, "Recepcionista não encontrado ou não existe.");
             }
         } catch (ClassNotFoundException | java.sql.SQLException ex) {
             JOptionPane.showMessageDialog(null, "Entre em contato com o suporte e informe o erro: " + ex.getMessage());
@@ -571,7 +571,7 @@ public class Paciente extends javax.swing.JFrame {
     private void itmExcluirRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmExcluirRepActionPerformed
         String nome;
         
-        nome = JOptionPane.showInputDialog("Digite o nome do(a) recepcionista a ser buscado: ");
+        nome = JOptionPane.showInputDialog("Digite o nome do(a) recepcionista a ser excluido: ");
         
         try{
             int retorno = new AppDao().excluirRep(nome);
@@ -605,7 +605,7 @@ public class Paciente extends javax.swing.JFrame {
 
                 new ExibirRecepcionista(nomeM,senha).setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Paciente não encontrado ou não existe.");
+                JOptionPane.showMessageDialog(null, "Recepcionista não encontrado ou não existe.");
             }
         } catch (ClassNotFoundException | java.sql.SQLException ex) {
             JOptionPane.showMessageDialog(null, "Entre em contato com o suporte e informe o erro: " + ex.getMessage());

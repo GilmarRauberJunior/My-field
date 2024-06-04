@@ -41,7 +41,8 @@ public class ExibirRecepcionista extends javax.swing.JFrame {
         lblSenhaRecepcionista = new javax.swing.JLabel();
         txtNomeRecepcionista = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Exibir Recepcionista - ADS Consultas");
         getContentPane().setLayout(null);
 
         lblNomeRecepcionista.setText("Nome:");

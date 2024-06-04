@@ -48,7 +48,7 @@ public class AlterarMedico extends javax.swing.JFrame {
         txtNomeMedico = new javax.swing.JTextField();
         bntAlterarMedico = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Alterar Dados dos Médicos - ADS Consultas");
         getContentPane().setLayout(null);
 

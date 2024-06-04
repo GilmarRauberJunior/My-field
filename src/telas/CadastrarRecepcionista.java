@@ -82,7 +82,7 @@ public class CadastrarRecepcionista extends javax.swing.JFrame {
     }//GEN-LAST:event_txtSenhaRecepcionistaActionPerformed
 
     private void bntCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCadastrarActionPerformed
-        String nome, senha,crm;
+        String nome, senha;
 
         nome = txtSenhaRecepcionista.getText();
         senha = txtSenhaRecepcionista.getText();
@@ -92,7 +92,7 @@ public class CadastrarRecepcionista extends javax.swing.JFrame {
             
             JOptionPane.showMessageDialog(null, "Recepcionista cadastrado com sucesso!");
             
-            txtSenhaRecepcionista.setText("");
+            txtNomeRecepcionista.setText("");
             txtSenhaRecepcionista.setText("");
             dispose();
         } catch (ClassNotFoundException ex) {
